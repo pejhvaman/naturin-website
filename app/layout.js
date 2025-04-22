@@ -3,7 +3,12 @@ import Navigation from "@/app/_components/Navigation";
 import "@/app/_styles/globals.css";
 
 export const metadata = {
-  title: "Naturin",
+  title: {
+    template: "%s / Naturin",
+    default: "Welcome / Naturin",
+  },
+  description:
+    "Luxurious cabin hotel, located in the heart of the wild forest of Kudistan, Iran.",
 };
 
 export default function RootLayout({ children }) {
