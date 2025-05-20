@@ -2,9 +2,8 @@ import SelectCountry from "@/app/_components/SelectCountry";
 import Image from "next/image";
 
 export default function Page() {
-  // CHANGE
-  const countryFlag = "pt.jpg";
-  const nationality = "portugal";
+  const countryFlag = "/ir.jpg";
+  const nationality = "Iran";
 
   return (
     <div>
@@ -41,7 +40,7 @@ export default function Page() {
               fill
               src={countryFlag}
               alt="Country flag"
-              className="h-5 rounded-sm"
+              className="h-5 !w-7 rounded-sm justify-self-end"
             />
           </div>
 
