@@ -23,6 +23,14 @@
     animation: rotate 1s infinite linear;
   }
 
+  .rdp {
+    --rdp-cell-size: 32px !important;
+    --rdp-accent-color: #d2af84 !important;
+    --rdp-background-color: #d2af84 !important;
+    --rdp-range_middle-background-color: #d2af84 !important;
+    margin: 0 !important;
+  }
+
   @keyframes rotate {
     to {
       transform: rotate(1turn);
@@ -31,9 +39,8 @@
 }
 
 /* For data picker */
-.rdp {
-  --rdp-cell-size: 32px !important;
-  --rdp-accent-color: theme("colors.accent.500") !important;
-  --rdp-background-color: theme("colors.accent.600") !important;
+.rdp-root {
+  --rdp-cell-size: 16px !important;
+  --rdp-range_middle-background-color: #d2af84 !important;
   margin: 0 !important;
 }
