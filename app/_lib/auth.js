@@ -10,9 +10,13 @@ const authConfig = {
   ],
 
   callbacks: {
-    authorized(auth, request) {
+    authorized({ auth, request }) {
       return !!auth?.user;
     },
+  },
+
+  pages: {
+    signIn: "/login",
   },
 };
 
