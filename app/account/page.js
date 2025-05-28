@@ -1,7 +1,13 @@
-function Page() {
+import { auth } from "../_lib/auth";
+
+async function Page() {
+  const session = await auth();
+
+  const firstName = session.user.name.split(" ").at(0);
+
   return (
     <h1 className="text-2xl mb-10 text-accent-400 font-medium">
-      Welcome Pezhwa
+      Welcome {firstName}
     </h1>
   );
 }
