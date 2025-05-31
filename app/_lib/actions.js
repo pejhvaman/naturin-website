@@ -105,7 +105,7 @@ export async function createBooking(bookingData, formData) {
     extraPrice: 0,
     totalPrice: bookingData.cabinPrice,
     status: "unconfirmed",
-    observations: bookingData.get("observations").slice(0, 1000),
+    observations: formData.get("observations").slice(0, 1000),
     isPaid: false,
     hasBreakfast: false,
     guestId: session.user.guestId,
