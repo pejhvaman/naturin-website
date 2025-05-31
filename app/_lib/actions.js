@@ -91,3 +91,8 @@ export async function updateBooking(formData) {
 
   redirect("/account/reservations");
 }
+
+export async function createBooking(bookingData, formData) {
+  console.log("bookingData=>", bookingData);
+  console.log("formData=>", formData);
+}
