@@ -44,3 +44,7 @@
   --rdp-range_middle-background-color: #d2af84 !important;
   margin: 0 !important;
 }
+
+.rdp-month_caption {
+  padding: 2rem;
+}

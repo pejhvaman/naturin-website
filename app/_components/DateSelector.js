@@ -37,7 +37,7 @@ function DateSelector({ settings, bookedDates, cabin }) {
   return (
     <div className="flex flex-col justify-between">
       <DayPicker
-        className={clsx("[&>*:only-child]:!justify-center", {
+        className={clsx("[&>div]:!mx-auto", {
           selected: "!bg-primary-500",
         })}
         mode="range"
