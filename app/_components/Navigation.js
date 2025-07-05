@@ -6,7 +6,7 @@ export default async function Navigation() {
 
   return (
     <nav className="w-full sm:w-fit z-10 text-xl">
-      <ul className="flex gap-6 justify-evenly md:gap-16 items-center text-sm md:text-base lg:text-lg">
+      <ul className="flex gap-6 justify-end sm:justify-evenly md:gap-16 items-center text-sm md:text-base lg:text-lg">
         <li>
           <Link
             href="/cabins"
@@ -30,12 +30,14 @@ export default async function Navigation() {
               className="hover:text-accent-400 transition-colors flex items-center gap-4"
             >
               <img
-                className="hidden sm:inline-block w-8 rounded-full"
+                className="w-8 rounded-full -translate-y-0.5"
                 src={session?.user?.image}
                 alt={session?.user?.name}
                 referrerPolicy="no-referrer"
               />
-              <span>{session?.user?.name}</span>
+              <span className="hidden sm:inline-block">
+                {session?.user?.name}
+              </span>
             </Link>
           ) : (
             <Link

@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import SignOutButton from "./SignOutButton";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const navLinks = [
   {
@@ -27,15 +28,22 @@ const navLinks = [
   },
 ];
 
-function SideNavigation() {
+function SideNavigation({ isOpen, toggleSidebar }) {
   const pathname = usePathname();
   console.log(pathname);
 
   return (
-    <nav className="border-r border-primary-900">
+    <nav
+      className={clsx(
+        "absolute lg:left-0 -left-[240px] transition-all w-[240px] h-full z-[100] border-r border-primary-900 bg-primary-950 pr-4 md:pr-8",
+        {
+          "left-0": isOpen,
+        }
+      )}
+    >
       <ul className="flex flex-col gap-2 h-full text-lg">
         {navLinks.map((link) => (
-          <li key={link.name}>
+          <li onClick={toggleSidebar} key={link.name}>
             <Link
               className={`py-3 px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-4 font-semibold text-primary-200 ${
                 pathname === link.href ? "bg-primary-900" : ""
@@ -48,7 +56,7 @@ function SideNavigation() {
           </li>
         ))}
 
-        <li className="mt-auto">
+        <li onClick={toggleSidebar} className="mt-auto">
           <SignOutButton />
         </li>
       </ul>
