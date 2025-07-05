@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default async function Page({ searchParams }) {
-  // searchParams is only available in page SCs
+  // searchParams is only available on page components
 
   const filter = searchParams?.capacity ?? "all";
 

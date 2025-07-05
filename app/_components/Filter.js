@@ -3,15 +3,15 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 function Filter() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
+  const searchParams = useSearchParams(); // current parms
+  const router = useRouter(); // to navigate programatically
+  const pathname = usePathname(); // // also used before to highlighte active nav in sidemenu
   const activeFilter = searchParams.get("capacity") ?? "all";
 
   const handleFilter = (filter) => {
     const params = new URLSearchParams(searchParams); // web api to mutate search params
 
-    params.set("capacity", filter); // just sets the param
+    params.set("capacity", filter); // just sets the param (also there is .delete and ...)
 
     router.replace(`${pathname}?${params.toString()}`, { scroll: false }); // programatic navigate
   };
