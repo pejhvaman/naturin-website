@@ -17,7 +17,7 @@ function Filter() {
   };
 
   return (
-    <div className="border border-primary-700">
+    <div className="border border-primary-700 text-base md:text-lg">
       <Button
         filter="all"
         activeFilter={activeFilter}
@@ -54,7 +54,7 @@ function Button({ filter, activeFilter, handleFilter, children }) {
   return (
     <button
       onClick={() => handleFilter(filter)}
-      className={`py-3 px-5 hover:bg-primary-700 cursor-pointer transition-colors ${
+      className={`py-2 px-3.5 sm:py-3 sm:px-5 hover:bg-primary-700 cursor-pointer transition-colors ${
         filter === activeFilter ? "bg-primary-700 text-primary-50" : ""
       }`}
     >
