@@ -32,8 +32,8 @@ function ReservationForm({ cabin, user }) {
   }
 
   return (
-    <div className="scale-[1.01] flex flex-col ">
-      <div className="bg-primary-800 text-primary-300 px-16 py-2 flex justify-between items-center">
+    <div className="md:scale-[1.01] flex flex-col ">
+      <div className="bg-primary-800 text-primary-300 px-6 md:px-16 py-3 flex justify-between items-center">
         <p>Logged in as</p>
 
         <div className="flex gap-4 items-center">
@@ -49,7 +49,7 @@ function ReservationForm({ cabin, user }) {
       </div>
       <form
         action={handleCreateReservation}
-        className="bg-primary-900 py-10 px-16 text-lg flex gap-5 flex-col flex-1"
+        className="bg-primary-900 py-10 px-8 md:px-16 text-lg flex gap-5 flex-col flex-1"
       >
         <div className="space-y-2">
           <label htmlFor="numGuests">How many guests?</label>
