@@ -17,11 +17,11 @@ export default async function Page({ params }) {
 
       <form
         action={updateBooking}
-        className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+        className="bg-primary-900 px-4 py-8 md:px-12 text-lg flex gap-6 flex-col"
       >
         <input type="hidden" name="bookingId" value={bookingId} />
 
-        <div className="space-y-2">
+        <div className="space-y-2 text-base md:text-lg">
           <label htmlFor="numGuests">How many guests?</label>
           <select
             name="numGuests"
@@ -38,7 +38,7 @@ export default async function Page({ params }) {
           </select>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 text-base md:text-lg">
           <label htmlFor="observations">
             Anything we should know about your stay?
           </label>
@@ -49,7 +49,7 @@ export default async function Page({ params }) {
           />
         </div>
 
-        <div className="flex justify-end items-center gap-6">
+        <div className="flex justify-end items-center gap-6 text-base md:text-lg">
           <SubmitButton pendingLabel="Updating">
             Update Reservation
           </SubmitButton>

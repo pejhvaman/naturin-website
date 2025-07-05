@@ -12,9 +12,9 @@ function UpdateProfileForm({ guest, children }) {
   return (
     <form
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className="bg-primary-900 py-8 px-4 md:px-12 text-lg flex gap-6 flex-col"
     >
-      <div className="space-y-2">
+      <div className="space-y-2 text-base md:text-lg">
         <label>Full name</label>
         <input
           name="fullName"
@@ -24,7 +24,7 @@ function UpdateProfileForm({ guest, children }) {
         />
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 text-base md:text-lg">
         <label>Email address</label>
         <input
           name="email"
@@ -34,7 +34,7 @@ function UpdateProfileForm({ guest, children }) {
         />
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 text-base md:text-lg">
         <div className="relative flex items-center justify-between">
           <label htmlFor="nationality">Where are you from?</label>
           <img
@@ -47,7 +47,7 @@ function UpdateProfileForm({ guest, children }) {
         {children}
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 text-base md:text-lg">
         <label htmlFor="nationalID">National ID number</label>
         <input
           name="nationalID"
