@@ -1,7 +1,6 @@
 {
-  "platform": "next",
   "port": 3000,
-  "app": "naturin",
-  "buildCommand": "npm run build",
-  "startCommand": "npm start"
+  "next": {
+    "mirror": true
+  },
 }
