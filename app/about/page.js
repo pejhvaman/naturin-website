@@ -1,5 +1,5 @@
 import Link from "next/link";
-import image1 from "@/public/about-1.jpg";
+import image1 from "../../public/about-1.jpg";
 import Image from "next/image";
 import { getCabins } from "../_lib/data-service";
 

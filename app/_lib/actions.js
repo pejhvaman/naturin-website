@@ -1,10 +1,10 @@
 "use server";
 
-import { auth, signIn, signOut } from "@/app/_lib/auth";
 import { supabase } from "./supabase";
 import { revalidatePath } from "next/cache";
 import { getBookings } from "./data-service";
 import { redirect } from "next/navigation";
+import { signIn, auth, signOut } from "./auth";
 
 export async function signInAction() {
   await signIn("google", { redirectTo: "/account" });
